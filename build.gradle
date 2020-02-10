@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+repositories {
+    jcenter()
+}
+
+javafx {
+    version = '11'
+    modules = [ 'javafx.controls', 'javafx.base', 'javafx.graphics', 'javafx.media', 'javafx.web' ]
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:28.1-jre'
+    testImplementation 'junit:junit:4.12'
+}
+
+application {
+    mainClassName = 'javafx.gradle.template.App'
+}
+
+run {
+    standardInput = System.in
+}
